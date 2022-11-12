@@ -1,0 +1,5 @@
+dist/
+public
+out
+coverage
+rollup.config.js

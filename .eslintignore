@@ -1,0 +1,14 @@
+node_modules
+dist/
+out
+.favorites.json
+coverage
+webpack.config.ts
+public/*.js
+
+\.vscode/
+.idea
+*.spec.js
+*.min.js
+build
+rollup.config.js
