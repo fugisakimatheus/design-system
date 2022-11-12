@@ -5,7 +5,7 @@
 ### **Obs:** Caso o tema seja alterado, ou tenha criado um novo componente, ou tema/variante do componente for alterado
 
 ```bash
-yarn generate:theme-tokens
+yarn gen:theme
 ```
 
 &nbsp;

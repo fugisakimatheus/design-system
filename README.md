@@ -1,59 +1,99 @@
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+# Fugisaki - Design System
 
-## Available Scripts
+## Configuração do ambiente
 
-In the project directory, you can run:
+- ### Node: 14.18.3 ou a versão LTS mais recente
+- ### Yarn: 1.22.4 ou mais recente
 
-### `yarn start`
+---
 
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
+&nbsp;
 
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
+## Comandos
 
-### `yarn test`
+### Instalando as dependências
 
-Launches the test runner in the interactive watch mode.<br /> See the section
-about
-[running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
+```bash
+yarn
 
-### `yarn build`
+#or
 
-Builds the app for production to the `build` folder.<br /> It correctly bundles
-React in production mode and optimizes the build for the best performance.
+yarn install
+```
 
-The build is minified and the filenames include the hashes.<br /> Your app is
-ready to be deployed!
+### Inicia o storybook
 
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
+```bash
+yarn storybook
+```
 
-### `yarn eject`
+#### Faz o build do storybook
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn build-storybook
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
+#### Gera as tipagens customizadas do tema do chakra, usando arquivo de configuração do tema
 
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
+```bash
+yarn gen:theme
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
+#### Executa os testes
 
-## Learn More
+```bash
+yarn test
+```
 
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Executa os testes no modo watch(fica observando mudanças)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn test:watch
+```
+
+#### Executa os testes com coverage
+
+```bash
+yarn test:coverage
+```
+
+#### Executa a verificação de estilos de código e tipagem
+
+```bash
+yarn check:lint
+```
+
+#### Executa a correção de estilos de código e tipagem
+
+```bash
+yarn fix:lint
+```
+
+#### Corrige identação e estilos de código
+
+```bash
+yarn prettify
+```
+
+---
+
+&nbsp;
+
+# Extensões requeridas
+
+- ### ESLint (<https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>);
+- ### Prettier (<https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode>);
+
+---
+
+&nbsp;
+
+# Outros documentos
+
+## [Como instalar a lib no meu projeto?](./INSTALL.md)
+
+## [Como fazer deploy da lib?](./DEPLOY.md)
+
+---
+
+&nbsp;

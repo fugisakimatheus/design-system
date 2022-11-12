@@ -1,6 +1,6 @@
 # Como instalar o design system no meu projeto?
 
-## 1° - Ter acesso ao repositório da biblioteca e ter SSH configurado no Github
+## 1° - Ter acesso ao repositório do design-system e ter SSH configurado no Github
 
 &nbsp;
 
@@ -9,22 +9,22 @@
 ### #branch, #tag, #commit-hash
 
 ```bash
-yarn add git+ssh://git@bitbucket.org:netsuperdev/yh-design-system.git#v1.0.8
+yarn add git+ssh://git@github.com:fugisakimatheus/design-system.git#v1.0.0
 
 # ou
 
-npm install git+ssh://git@bitbucket.org:netsuperdev/yh-design-system.git#develop
+npm install git+ssh://git@github.com:fugisakimatheus/design-system.git#develop
 ```
 
 ---
 
 &nbsp;
 
-## 3° - Configurar ThemeProvider e importar os estilos CSS
+## 3° - Configurar ThemeProvider
 
-#### Deve-se adicionar o encapsulamento do ThemeProvider e importar o CSS no arquivo principal da aplicação, ou seja, o arquivo no qual vai ter acesso a todas as telas/componentes.
+#### Deve-se adicionar o encapsulamento do ThemeProvider no arquivo principal da aplicação, ou seja, o arquivo no qual vai ter acesso a todas as telas/componentes.
 
-### Exemplo: arquivo "\_app.js"
+### Exemplo: arquivo "\_app.js" no **Next.js**
 
 ```js
 import { ThemeProvider } from '@fugisaki/design-system'
@@ -38,7 +38,7 @@ export default function MyApp({ Component, pageProps }) {
 }
 ```
 
-### Outro exemplo: arquivo "index.js"
+### Outro exemplo: arquivo "index.js" com **CRA**
 
 ```js
 import Routes from './routes'
