@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "description": "Biblioteca de componentes React",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "main": "dist/cjs/main.js",
+  "module": "dist/esm/main.js",
+  "types": "dist/esm/main.d.ts",
   "files": [
     "/dist"
   ],
   "scripts": {
+    "start": "react-scripts start",
     "postinstall": "node ./src/scripts/install-theme.js",
     "bootstrap": "yarn install --frozen-lockfile",
     "build": "rollup -c",

@@ -15,7 +15,7 @@ const external = [...peerDependencies, ...dependencies]
 
 module.exports = [
   {
-    input: 'src/index.ts',
+    input: 'src/main.ts',
     output: [
       {
         file: packageJson.main,
