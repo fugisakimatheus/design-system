@@ -1,6 +1,6 @@
 {
   "name": "@fugisaki/design-system",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Biblioteca de componentes React",
   "main": "dist/cjs/index.js",
