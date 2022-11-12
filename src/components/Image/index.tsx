@@ -14,10 +14,10 @@ export const Image = (props: ImageProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   return (
-    <Skeleton isLoaded={!isLoading}>
+    <Skeleton isLoaded={!isLoading || isError}>
       <ChakraImage
         onError={() => setIsError(true)}
-        onLoadedData={() => setIsLoading(false)}
+        onLoad={() => setIsLoading(false)}
         src={isError ? defaultImage : props.src}
         {...props}
       />
