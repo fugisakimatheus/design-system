@@ -10,7 +10,7 @@
     "/dist"
   ],
   "scripts": {
-    "postinstall": "yarn gen:theme",
+    "postinstall": "node ./src/scripts/install-theme.js",
     "bootstrap": "yarn install --frozen-lockfile",
     "build": "rollup -c",
     "fix:lint": "eslint --fix . --ext .ts,.tsx",
@@ -23,8 +23,7 @@
     "open:coverage": "node src/scripts/open-coverage.js",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "gen:theme": "chakra-cli tokens ./src/theme/index.ts",
-    "gen:theme:watch": "chakra-cli tokens ./src/theme/index.ts --watch"
+    "gen:theme": "node ./src/scripts/theme-tokens.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.7",
