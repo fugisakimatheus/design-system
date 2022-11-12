@@ -3,3 +3,4 @@ public
 out
 coverage
 rollup.config.js
+open-coverage.js

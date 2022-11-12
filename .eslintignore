@@ -12,3 +12,4 @@ public/*.js
 *.min.js
 build
 rollup.config.js
+open-coverage.js
