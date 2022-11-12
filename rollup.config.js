@@ -4,6 +4,7 @@ const peerDeps = require('rollup-plugin-peer-deps-external')
 const postcss = require('rollup-plugin-postcss')
 const { terser } = require('rollup-plugin-terser')
 const typescript = require('rollup-plugin-typescript2')
+const image = require('@rollup/plugin-image')
 
 const packageJson = require('./package.json')
 
@@ -29,6 +30,7 @@ module.exports = [
     ],
     external,
     plugins: [
+      image(),
       nodeResolve({ browser: true, preferBuiltins: false }),
       typescript({ tsconfig: './tsconfig.json' }),
       peerDeps({ includeDependencies: true }),

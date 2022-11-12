@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Token } from '@chakra-ui/styled-system/dist/declarations/src/utils'
 import { GroupBase } from 'chakra-react-select'
 
+import { Token } from './components/SelectSearch'
 import { ColorsNames } from './theme'
 
 declare module 'react-select/dist/declarations/src/Select' {
