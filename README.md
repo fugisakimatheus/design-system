@@ -7,8 +7,6 @@
 
 ---
 
-&nbsp;
-
 ## Comandos
 
 ### Instalando as dependências
