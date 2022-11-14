@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { ColorsNames } from '../../theme'
 import { MdIcon } from '../Icon'
 import { IconButton } from '../IconButton'
 import { HStack } from '../Stack'
@@ -11,6 +12,8 @@ export type PaginatorProps = {
   lastPage: number
   offsetSize?: number
   size?: PaginatorSize
+  color?: ColorsNames
+  textColor?: ColorsNames
   onChangePage: (page: number) => void
 }
 
@@ -19,10 +22,13 @@ export const Paginator = ({
   lastPage,
   offsetSize = 3,
   size = 'md',
+  color = 'blue.300',
+  textColor = 'gray.900',
   onChangePage
 }: PaginatorProps) => {
   const commonProps = {
-    variant: 'default-outline',
+    variant: 'outline',
+    color: textColor,
     size
   }
 
@@ -93,7 +99,7 @@ export const Paginator = ({
       if (indexID === 2 && hasLeftMoreButton) {
         elementsToRender.push(
           <IconButton
-            key={'show-befores-pages'}
+            key="show-befores-pages"
             icon={<MdIcon name="MdMoreHoriz" />}
             onClick={() => handleChangePage(currentPage - offsetSize)}
             aria-label="Mostrar páginas anteriores"
@@ -105,7 +111,7 @@ export const Paginator = ({
       if (indexID === lastPage - 1 && hasRightMoreButton) {
         elementsToRender.push(
           <IconButton
-            key={'show-after-pages'}
+            key="show-after-pages"
             icon={<MdIcon name="MdMoreHoriz" />}
             onClick={() => handleChangePage(currentPage + offsetSize)}
             aria-label="Mostrar páginas anteriores"
@@ -125,10 +131,8 @@ export const Paginator = ({
         <IconButton
           key={`page-${indexID}`}
           data-testid={`button-page-${indexID}`}
-          bgColor={index === currentPage ? 'brand.primary-lightest' : undefined}
-          borderColor={
-            index === currentPage ? 'brand.primary-lightest' : undefined
-          }
+          bgColor={index === currentPage ? color : undefined}
+          borderColor={index === currentPage ? color : undefined}
           onClick={() => handleChangePage(index)}
           icon={<>{indexID}</>}
           aria-label={`Página ${indexID}`}
@@ -150,5 +154,5 @@ export const Paginator = ({
     />
   )
 
-  return <HStack spacing="nano">{elementsToRender}</HStack>
+  return <HStack spacing="2">{elementsToRender}</HStack>
 }

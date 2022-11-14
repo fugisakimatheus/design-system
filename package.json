@@ -10,7 +10,7 @@
     "/dist"
   ],
   "scripts": {
-    "start": "react-scripts start",
+    "ds:docs": "react-scripts start",
     "postinstall": "node ./src/scripts/install-theme.js",
     "bootstrap": "yarn install --frozen-lockfile",
     "build": "rollup -c",
