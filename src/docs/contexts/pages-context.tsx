@@ -6,7 +6,7 @@ import React, {
   useState
 } from 'react'
 
-import { ComponentPage, componentsPages } from '../components/components-map'
+import { ComponentPage, componentsPages } from '../components'
 
 export type RoutesContextType = {
   currentPage: ComponentPage
@@ -21,7 +21,7 @@ export const RoutesProvider = ({ children }: { children: ReactNode }) => {
   const [page, setPage] = useState<ComponentPage>(componentsPages[0])
 
   const setCurrentPage = useCallback((page: ComponentPage) => {
-    setPage(page)
+    setPage(page || componentsPages[0])
   }, [])
 
   return (

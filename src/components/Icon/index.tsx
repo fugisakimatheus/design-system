@@ -1,20 +1,23 @@
 import React from 'react'
-import { IconBaseProps, IconType } from 'react-icons'
+import { IconType } from 'react-icons'
 import * as FaIcons from 'react-icons/fa'
 import * as FiIcons from 'react-icons/fi'
 import * as MdIcons from 'react-icons/md'
-import theme, { ColorsNames, SpaceNames } from 'theme'
+import { ColorsNames, SpaceNames } from 'theme'
+
+import { Flex } from '../Flex'
 
 export type MdIconNames = keyof typeof MdIcons
 export type FaIconNames = keyof typeof FaIcons
 export type FiIconNames = keyof typeof FiIcons
 
 export type IconSizes = 'xs' | 'sm' | 'md' | 'lg'
-export type IconsProps<T> = IconBaseProps & {
+export type IconsProps<T> = {
   name: T
   color?: ColorsNames
   size?: IconSizes
   onClick?: () => void
+  backgroundColor?: ColorsNames
   marginLeft?: SpaceNames
   marginRight?: SpaceNames
   marginTop?: SpaceNames
@@ -46,17 +49,18 @@ export function iconBuilder<T>(
     [name: string]: IconType
   }
 ) {
-  const Icon = reactIcons[props.name as string]
-  const themeColor = theme.colors[props.color ?? 'black']
-  const iconSize = iconSizesMap.get(props.size ?? 'md') ?? '1rem'
+  const { name, color, size, onClick, ...rest } = props
+  const Icon = reactIcons[name as string]
+  const iconSize = iconSizesMap.get(size ?? 'md') ?? '1rem'
 
   return (
-    <Icon
-      {...props}
-      color={themeColor}
-      size={iconSize}
-      cursor={props.onClick ? 'pointer' : undefined}
-    />
+    <Flex align="center" justify="center" color={color} {...rest}>
+      <Icon
+        size={iconSize}
+        onClick={onClick}
+        cursor={onClick ? 'pointer' : undefined}
+      />
+    </Flex>
   )
 }
 
