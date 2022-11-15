@@ -19,16 +19,10 @@ yarn
 yarn install
 ```
 
-### Inicia o storybook
+### Inicia o as docs do design-system
 
 ```bash
-yarn storybook
-```
-
-#### Faz o build do storybook
-
-```bash
-yarn build-storybook
+yarn ds:docs
 ```
 
 #### Gera as tipagens customizadas do tema do chakra, usando arquivo de configuração do tema
