@@ -8,7 +8,7 @@ export {
   useClipboard,
   useDisclosure,
   useBoolean,
+  useDimensions,
   useToken,
-  useNumberInput,
   useEditableControls
 } from '@chakra-ui/react'

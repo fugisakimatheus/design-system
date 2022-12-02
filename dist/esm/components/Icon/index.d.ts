@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { IconBaseProps, IconType } from 'react-icons';
+import { IconType } from 'react-icons';
 import * as FaIcons from 'react-icons/fa';
 import * as FiIcons from 'react-icons/fi';
 import * as MdIcons from 'react-icons/md';
@@ -8,11 +8,12 @@ export declare type MdIconNames = keyof typeof MdIcons;
 export declare type FaIconNames = keyof typeof FaIcons;
 export declare type FiIconNames = keyof typeof FiIcons;
 export declare type IconSizes = 'xs' | 'sm' | 'md' | 'lg';
-export declare type IconsProps<T> = IconBaseProps & {
+export declare type IconsProps<T> = {
     name: T;
     color?: ColorsNames;
     size?: IconSizes;
     onClick?: () => void;
+    backgroundColor?: ColorsNames;
     marginLeft?: SpaceNames;
     marginRight?: SpaceNames;
     marginTop?: SpaceNames;

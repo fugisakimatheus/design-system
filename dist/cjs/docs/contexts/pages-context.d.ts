@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ComponentPage } from '../components/components-map';
+import { ComponentPage } from '../components';
 export declare type RoutesContextType = {
     currentPage: ComponentPage;
     setCurrentPage: (page: ComponentPage) => void;

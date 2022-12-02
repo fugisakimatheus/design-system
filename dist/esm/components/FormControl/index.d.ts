@@ -1,0 +1,10 @@
+import { FormControlProps as ChakraFormControlProps, FormLabelProps as ChakraFormLabelProps, HelpTextProps as ChakraHelpTextProps, FormErrorMessageProps as ChakraFormErrorMessageProps } from '@chakra-ui/react';
+export declare type FormControlProps = ChakraFormControlProps;
+export declare const FormControl: import("@chakra-ui/system").ComponentWithAs<"div", ChakraFormControlProps>;
+export declare type FormLabelProps = ChakraFormLabelProps;
+export declare const FormLabel: import("@chakra-ui/system").ComponentWithAs<"label", ChakraFormLabelProps>;
+export declare type FormHelpTextProps = ChakraHelpTextProps;
+export declare const FormHelperText: import("@chakra-ui/system").ComponentWithAs<"div", ChakraHelpTextProps>;
+export declare type FormErrorMessageProps = ChakraFormErrorMessageProps;
+export declare const FormErrorMessage: import("@chakra-ui/system").ComponentWithAs<"div", ChakraFormErrorMessageProps>;
+export declare const FormErrorIcon: import("@chakra-ui/system").ComponentWithAs<"svg", import("@chakra-ui/icon").IconProps>;
