@@ -1,6 +1,9 @@
 import React from 'react'
 
+import Button from './button'
 import Checkbox from './checkbox'
+import Colors from './colors'
+import Icon from './icon'
 import Input from './input'
 import Introduction from './introduction'
 
@@ -18,7 +21,7 @@ export const componentsPages: ComponentPage[] = [
   {
     name: 'Colors',
     group: 'Tokens',
-    component: <Checkbox />
+    component: <Colors />
   },
   {
     name: 'Borders',
@@ -108,7 +111,7 @@ export const componentsPages: ComponentPage[] = [
   {
     name: 'Button',
     group: 'Components',
-    component: <Input />
+    component: <Button />
   },
   {
     name: 'IconButton',
@@ -118,7 +121,7 @@ export const componentsPages: ComponentPage[] = [
   {
     name: 'Icon',
     group: 'Components',
-    component: <Input />
+    component: <Icon />
   },
   {
     name: 'Input',

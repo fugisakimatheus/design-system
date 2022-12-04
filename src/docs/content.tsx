@@ -10,7 +10,7 @@ function Content() {
   const { currentPage } = useRoute()
 
   return (
-    <Flex height="100vh" width="100%" backgroundColor="white">
+    <Flex height="100vh" width="100%" backgroundColor="gray.50">
       <Drawer />
       <Box height="100%" width="calc(100% - 300px)" position="relative">
         <Header
@@ -24,7 +24,7 @@ function Content() {
           height="calc(100% - 56px)"
           width="100%"
           overflowY="auto"
-          backgroundColor="gray.50"
+          backgroundColor="white"
           padding="1rem"
         >
           {currentPage.component}

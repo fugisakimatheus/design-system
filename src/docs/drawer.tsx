@@ -35,7 +35,7 @@ const Drawer = () => {
     <Flex
       height="100%"
       width="300px"
-      backgroundColor="white"
+      backgroundColor="gray.50"
       direction="column"
       align="left"
       overflowY="auto"
@@ -47,7 +47,7 @@ const Drawer = () => {
         paddingX="1rem"
         fontSize="larger"
         fontWeight="bold"
-        color="blue.700"
+        color="blue.600"
       >
         Fugisaki - Design System
       </Text>
@@ -62,19 +62,19 @@ const Drawer = () => {
             paddingX="1rem"
             cursor="pointer"
             align="center"
+            fontWeight={isActiveRoute ? 'bold' : 'semibold'}
             _hover={{
               backgroundColor: 'blue.50',
-              color: 'blue.700'
+              color: 'blue.600',
+              fontWeight: 'bold'
             }}
-            color={isActiveRoute ? 'blue.700' : 'gray.700'}
-            backgroundColor={isActiveRoute ? 'blue.50' : 'white'}
+            color={isActiveRoute ? 'blue.600' : 'gray.700'}
+            backgroundColor={isActiveRoute ? 'blue.50' : 'gray.50'}
             userSelect="none"
-            onClick={() => setCurrentPage(page)}
+            onClick={() => setCurrentPage(page.name)}
           >
             <MdIcon name="MdBorderInner" size="sm" marginRight="2" />
-            <Text fontSize="sm" fontWeight="semibold">
-              {page.name}
-            </Text>
+            <Text fontSize="sm">{page.name}</Text>
           </Flex>
         )
       })}
@@ -98,7 +98,7 @@ const Drawer = () => {
                 fontSize="12px"
                 textTransform="uppercase"
                 fontWeight="bold"
-                color="blue.700"
+                color="blue.600"
                 letterSpacing="wider"
               >
                 {group.name}
@@ -112,7 +112,7 @@ const Drawer = () => {
                 }
                 size="sm"
                 marginRight="2"
-                color="blue.700"
+                color="blue.600"
               />
             </Flex>
 
@@ -128,19 +128,19 @@ const Drawer = () => {
                       paddingX="1rem"
                       cursor="pointer"
                       align="center"
+                      fontWeight={isActiveRoute ? 'bold' : 'semibold'}
                       _hover={{
                         backgroundColor: 'blue.50',
-                        color: 'blue.700'
+                        color: 'blue.600',
+                        fontWeight: 'bold'
                       }}
-                      color={isActiveRoute ? 'blue.700' : 'gray.700'}
-                      backgroundColor={isActiveRoute ? 'blue.50' : 'white'}
+                      color={isActiveRoute ? 'blue.600' : 'gray.700'}
+                      backgroundColor={isActiveRoute ? 'blue.50' : 'gray.50'}
                       userSelect="none"
-                      onClick={() => setCurrentPage(page)}
+                      onClick={() => setCurrentPage(page.name)}
                     >
                       <MdIcon name="MdBorderInner" size="sm" marginRight="2" />
-                      <Text fontSize="sm" fontWeight="semibold">
-                        {page.name}
-                      </Text>
+                      <Text fontSize="sm">{page.name}</Text>
                     </Flex>
                   )
                 })}

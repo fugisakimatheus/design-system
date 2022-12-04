@@ -13,7 +13,7 @@ const Header = (props: HeaderProps) => {
     <Flex
       height="56px"
       width="100%"
-      backgroundColor="white"
+      backgroundColor="gray.50"
       borderBottom="1px solid"
       borderColor="gray.100"
       paddingX="1rem"

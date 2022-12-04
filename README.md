@@ -1,6 +1,7 @@
 # Fugisaki - Design System
 
 ## Configuração do ambiente
+  ### Recomenda-se o uso do **"nvm"** para facilitar a instalação e configuração do **Node** e suas diferentes versões.
 
 - ### Node: 14.18.3 ou a versão LTS mais recente
 - ### Yarn: 1.22.4 ou mais recente
@@ -19,7 +20,7 @@ yarn
 yarn install
 ```
 
-### Inicia o as docs do design-system
+### Inicia as docs do design-system
 
 ```bash
 yarn ds:docs
@@ -43,7 +44,7 @@ yarn test
 yarn test:watch
 ```
 
-#### Executa os testes com coverage
+#### Executa os testes e logo depois abre o arquivo de coverage
 
 ```bash
 yarn test:coverage
@@ -55,13 +56,13 @@ yarn test:coverage
 yarn check:lint
 ```
 
-#### Executa a correção de estilos de código e tipagem
+#### Executa a correção da padronização de syntax do typescript
 
 ```bash
 yarn fix:lint
 ```
 
-#### Corrige identação e estilos de código
+#### Corrige identação, estilos de código, quebra de linha, etc...
 
 ```bash
 yarn prettify

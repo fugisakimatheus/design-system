@@ -6,11 +6,15 @@ import React, {
   useState
 } from 'react'
 
-import { ComponentPage, componentsPages } from '../components'
+import {
+  ComponentPage,
+  componentsPages,
+  componentsPagesMap
+} from '../components'
 
 export type RoutesContextType = {
   currentPage: ComponentPage
-  setCurrentPage: (page: ComponentPage) => void
+  setCurrentPage: (page: string) => void
 }
 
 export const RoutesContext = createContext<RoutesContextType>(
@@ -18,14 +22,18 @@ export const RoutesContext = createContext<RoutesContextType>(
 )
 
 export const RoutesProvider = ({ children }: { children: ReactNode }) => {
-  const [page, setPage] = useState<ComponentPage>(componentsPages[0])
+  const [page, setPage] = useState<string>('Introdução')
 
-  const setCurrentPage = useCallback((page: ComponentPage) => {
-    setPage(page || componentsPages[0])
+  const setCurrentPage = useCallback((page: string) => {
+    setPage(page || 'Introdução')
   }, [])
 
+  const selectedPage = componentsPagesMap.get(page) || componentsPages[0]
+
   return (
-    <RoutesContext.Provider value={{ currentPage: page, setCurrentPage }}>
+    <RoutesContext.Provider
+      value={{ currentPage: selectedPage, setCurrentPage }}
+    >
       {children}
     </RoutesContext.Provider>
   )
