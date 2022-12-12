@@ -1,6 +1,6 @@
 {
   "name": "@fugisaki/design-system",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Biblioteca de componentes React",
   "main": "dist/cjs/main.js",
@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "ds:docs": "react-scripts start",
+    "ds:build": "react-scripts build",
     "postinstall": "node ./src/scripts/install-theme.js",
     "bootstrap": "yarn install --frozen-lockfile",
     "build": "rollup -c",
