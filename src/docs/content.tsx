@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Box, Flex } from '../main'
 
@@ -8,6 +8,18 @@ import Header from './header'
 
 function Content() {
   const { currentPage } = useRoute()
+
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)')
+
+  useEffect(() => {
+    const favicon = document.getElementById('favicon') as HTMLLinkElement
+    if (!favicon) return
+    if (isDark) {
+      favicon.href = './favicon-dark.ico'
+    } else {
+      favicon.href = './favicon.ico'
+    }
+  }, [isDark])
 
   return (
     <Flex height="100vh" width="100%" backgroundColor="gray.50">
