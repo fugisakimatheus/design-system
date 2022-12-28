@@ -13,5 +13,5 @@ export declare type SelectSearchProps = SelectProps & Props<Option, IsMulti, Gro
     color?: ColorsNames;
     multiValueBackground?: ColorsNames;
 };
-export declare const SelectSearch: import("@chakra-ui/system").ComponentWithAs<"input", SelectSearchProps>;
+export declare const SelectSearch: import("@chakra-ui/system/dist/system.types").ComponentWithAs<"input", SelectSearchProps>;
 export {};

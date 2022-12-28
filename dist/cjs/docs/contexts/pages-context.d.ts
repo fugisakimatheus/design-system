@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { ComponentPage } from '../components';
 export declare type RoutesContextType = {
     currentPage: ComponentPage;
-    setCurrentPage: (page: ComponentPage) => void;
+    setCurrentPage: (page: string) => void;
 };
 export declare const RoutesContext: React.Context<RoutesContextType>;
 export declare const RoutesProvider: ({ children }: {

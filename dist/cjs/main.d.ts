@@ -42,3 +42,7 @@ export * from './components/SimpleGrid';
 export * from './components/Show';
 export * from './components/Hide';
 export * from './components/FormControl';
+export * from './components/ScrollPaginator';
+export * from './components/Card';
+export * from './components/Menu';
+export * from './components/Global';

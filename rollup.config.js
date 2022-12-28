@@ -5,6 +5,7 @@ const postcss = require('rollup-plugin-postcss')
 const { terser } = require('rollup-plugin-terser')
 const typescript = require('rollup-plugin-typescript2')
 const image = require('@rollup/plugin-image')
+const url = require('rollup-plugin-url')
 
 const packageJson = require('./package.json')
 
@@ -31,6 +32,10 @@ module.exports = [
     external,
     plugins: [
       image(),
+      url({
+        include: ['**/*.ttf', '**/*.woff', '**/*.woff2'],
+        limit: Infinity,
+      }),
       nodeResolve({ browser: true, preferBuiltins: false }),
       typescript({ tsconfig: './tsconfig.json' }),
       peerDeps({ includeDependencies: true }),

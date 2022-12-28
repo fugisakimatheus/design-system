@@ -204,6 +204,7 @@ export interface ThemeTypings extends BaseThemeTypings {
     | 'chakra-body-text'
     | 'chakra-body-bg'
     | 'chakra-border-color'
+    | 'chakra-subtle-bg'
     | 'chakra-placeholder-color'
     | (string & {})
   colorSchemes:
@@ -671,6 +672,10 @@ export interface ThemeTypings extends BaseThemeTypings {
     Tooltip: {
       sizes: string & {}
       variants: string & {}
+    }
+    Card: {
+      sizes: 'sm' | 'md' | 'lg' | (string & {})
+      variants: 'elevated' | 'outline' | 'filled' | 'unstyled' | (string & {})
     }
   }
 }
