@@ -3,6 +3,7 @@ import { IconType } from 'react-icons'
 import * as FaIcons from 'react-icons/fa'
 import * as FiIcons from 'react-icons/fi'
 import * as MdIcons from 'react-icons/md'
+import * as SiIcons from 'react-icons/si'
 import { ColorsNames, SpaceNames } from 'theme'
 
 import { Flex } from '../Flex'
@@ -10,31 +11,33 @@ import { Flex } from '../Flex'
 export type MdIconNames = keyof typeof MdIcons
 export type FaIconNames = keyof typeof FaIcons
 export type FiIconNames = keyof typeof FiIcons
+export type SiIconNames = keyof typeof SiIcons
 
 export type IconSizes = 'xs' | 'sm' | 'md' | 'lg'
 export type IconsProps<T> = {
   name: T
   color?: ColorsNames
   size?: IconSizes
-  onClick?: () => void
   backgroundColor?: ColorsNames
+  marginTop?: SpaceNames
   marginLeft?: SpaceNames
   marginRight?: SpaceNames
-  marginTop?: SpaceNames
   marginBottom?: SpaceNames
   marginX?: SpaceNames
   marginY?: SpaceNames
+  paddingTop?: SpaceNames
   paddingLeft?: SpaceNames
   paddingRight?: SpaceNames
-  paddingTop?: SpaceNames
   paddingBottom?: SpaceNames
   paddingX?: SpaceNames
   paddingY?: SpaceNames
+  onClick?: () => void
 }
 
 export type MdIconsProps = IconsProps<MdIconNames>
 export type FaIconsProps = IconsProps<FaIconNames>
 export type FiIconsProps = IconsProps<FiIconNames>
+export type SiIconsProps = IconsProps<SiIconNames>
 
 export const iconSizesMap = new Map<IconSizes, string>([
   ['xs', '0.75rem'],
@@ -74,4 +77,8 @@ export const FaIcon = (props: FaIconsProps) => {
 
 export const FiIcon = (props: FiIconsProps) => {
   return iconBuilder<FiIconNames>(props, FiIcons)
+}
+
+export const SiIcon = (props: SiIconsProps) => {
+  return iconBuilder<SiIconNames>(props, FiIcons)
 }
