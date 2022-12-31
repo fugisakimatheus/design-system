@@ -45,8 +45,8 @@ export const customTheme: Theme = {
   },
   fonts: {
     ...baseTheme.fonts,
-    heading: `'Roboto', sans-serif`,
-    body: `'Roboto', sans-serif`
+    heading: `'Roboto', sans-serif !important`,
+    body: `'Roboto', sans-serif !important`
   },
   fontSizes: {
     ...baseTheme.fontSizes

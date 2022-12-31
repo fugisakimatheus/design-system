@@ -4,7 +4,7 @@ import {
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
-import defaultImage from '../../assets/images/no-image.png'
+import defaultImage from '../../theme/assets/images/no-image.png'
 import { Skeleton } from '../Skeleton'
 import { Spinner } from '../Spinner'
 

@@ -1,25 +1,15 @@
 import { Global } from '@emotion/react'
 import React from 'react'
 
-import RobotoBoldTTF from '../assets/fonts/roboto-bold/roboto-bold.ttf'
-import RobotoBoldWOFF from '../assets/fonts/roboto-bold/roboto-bold.woff'
-import RobotoBoldWOFF2 from '../assets/fonts/roboto-bold/roboto-bold.woff2'
-import RobotoMediumTTF from '../assets/fonts/roboto-medium/roboto-medium.ttf'
-import RobotoMediumWOFF from '../assets/fonts/roboto-medium/roboto-medium.woff'
-import RobotoMediumWOFF2 from '../assets/fonts/roboto-medium/roboto-medium.woff2'
-import RobotoRegularTTF from '../assets/fonts/roboto-regular/roboto-regular.ttf'
-import RobotoRegularWOFF from '../assets/fonts/roboto-regular/roboto-regular.woff'
-import RobotoRegularWOFF2 from '../assets/fonts/roboto-regular/roboto-regular.woff2'
-
 const Fonts = () => (
   <Global
     styles={`
       /* latin */
       @font-face {
         font-family: 'roboto';
-        src: url(${RobotoBoldWOFF2}?#iefix') format('woff2'),
-             url(${RobotoBoldWOFF}) format('woff'),
-             url(${RobotoBoldTTF}) format('truetype');
+        src: url(./assets/fonts/roboto-bold/roboto-bold.ttf?#iefix') format('woff2'),
+             url(./assets/fonts/roboto-bold/roboto-bold.woff) format('woff'),
+             url(./assets/fonts/roboto-bold/roboto-bold.ttf) format('truetype');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
@@ -28,9 +18,9 @@ const Fonts = () => (
       /* latin */
       @font-face {
         font-family: 'roboto';
-        src: url(${RobotoMediumWOFF2}?#iefix') format('woff2'),
-             url(${RobotoMediumWOFF}) format('woff'),
-             url(${RobotoMediumTTF}) format('truetype');
+        src: url(./assets/fonts/roboto-medium/roboto-medium.ttf?#iefix') format('woff2'),
+             url(./assets/fonts/roboto-medium/roboto-medium.woff) format('woff'),
+             url(./assets/fonts/roboto-medium/roboto-medium.ttf) format('truetype');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
@@ -39,9 +29,9 @@ const Fonts = () => (
       /* latin */
       @font-face {
         font-family: 'roboto';
-        src: url(${RobotoRegularWOFF2}?#iefix') format('woff2'),
-             url(${RobotoRegularWOFF}) format('woff'),
-             url(${RobotoRegularTTF}) format('truetype');
+        src: url(./assets/fonts/roboto-regular/roboto-regular.ttf?#iefix') format('woff2'),
+             url(./assets/fonts/roboto-regular/roboto-regular.woff) format('woff'),
+             url(./assets/fonts/roboto-regular/roboto-regular.ttf) format('truetype');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
