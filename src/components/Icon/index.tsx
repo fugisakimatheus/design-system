@@ -80,5 +80,5 @@ export const FiIcon = (props: FiIconsProps) => {
 }
 
 export const SiIcon = (props: SiIconsProps) => {
-  return iconBuilder<SiIconNames>(props, FiIcons)
+  return iconBuilder<SiIconNames>(props, SiIcons)
 }
