@@ -6,7 +6,7 @@ const Fonts = () => (
     styles={`
       /* latin */
       @font-face {
-        font-family: 'roboto';
+        font-family: 'Roboto';
         src: url(./assets/fonts/roboto-bold/roboto-bold.ttf?#iefix') format('woff2'),
              url(./assets/fonts/roboto-bold/roboto-bold.woff) format('woff'),
              url(./assets/fonts/roboto-bold/roboto-bold.ttf) format('truetype');
@@ -17,7 +17,7 @@ const Fonts = () => (
       }
       /* latin */
       @font-face {
-        font-family: 'roboto';
+        font-family: 'Roboto';
         src: url(./assets/fonts/roboto-medium/roboto-medium.ttf?#iefix') format('woff2'),
              url(./assets/fonts/roboto-medium/roboto-medium.woff) format('woff'),
              url(./assets/fonts/roboto-medium/roboto-medium.ttf) format('truetype');
@@ -28,7 +28,7 @@ const Fonts = () => (
       }
       /* latin */
       @font-face {
-        font-family: 'roboto';
+        font-family: 'Roboto';
         src: url(./assets/fonts/roboto-regular/roboto-regular.ttf?#iefix') format('woff2'),
              url(./assets/fonts/roboto-regular/roboto-regular.woff) format('woff'),
              url(./assets/fonts/roboto-regular/roboto-regular.ttf) format('truetype');

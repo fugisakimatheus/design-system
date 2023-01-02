@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export declare type HeaderProps = {
     title: string;
 };
